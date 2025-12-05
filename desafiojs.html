@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+</head>
+<body>
+
+    <input placeholder="Buscador de contatos">
+    <p></p>
+    <button>Procurar</button>
+    
+</body>
+
+<script>
+
+    const input = document.querySelector('input')
+    const p = document.querySelector('p')
+    const button = document.querySelector('button') 
+
+    const contacts = [
+        {name: 'Jonathan', number: '(19) 993254448'},
+        {name: 'Robert', number: '(19) 998745632'},
+        {name: 'Maria', number: '(19) 997856321'},
+        {name: 'Ana',number: '(19) 996321478'},
+        {name: 'João', number: '(19) 995478123'},
+    ]
+
+  button.addEventListener('click', function() {
+        const name = input.value.trim()
+        const contact = contacts.find(c => c.name.toLowerCase() === name.toLowerCase())
+
+        if (contact) {
+            p.innerHTML = `Número de ${contact.name}: ${contact.number}`
+        } else {
+            p.innerHTML = 'Contato não encontrado 😕'
+        }
+    })
+
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+ </head>
+
+<body>
+    <p id="resultado"></p>
+    <main>
+        <img src="./assets/Logo.png" alt="">
+
+        <div class="sortear">
+        <label>Sortear</label>
+        <input class="input-what" placeholder="quantos" type="number">
+        <label>Número</label>
+        </div>
+
+        <div class="entre">
+        <label>Entre</label>
+        <input class="input-min" placeholder="1" type="number">
+        <label>e</label>
+        <input class="input-max" placeholder="999999" type="number">
+        </div>
+
+
+        <div class="button">
+        <button onclick="drawNumber()">SORTEAR</button>
+        </div>
+         <p id="resultado"></p>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
